@@ -5,7 +5,7 @@ weight: 2
 ---
 
 ## Configuration Basics
-The Overwatch configuration can be created as a case class of [OverwatchParams](#overwatchparams) or as a json string passed into
+The Overwatch configuration can be created as a case class of [OverwatchParams](#overwatchparams) or as a JSON string passed into
 the main class `com.databricks.labs.overwatch.BatchRunner`. When passed in as a json string, it is 
 serialized into an instance of [OverwatchParams](#overwatchparams). This provides strong validation on the input parameters
 and strong typing for additional validation options. All configs attempt to be defaulted to a reasonable default
@@ -208,7 +208,7 @@ Config | Required Override | Default Value | Type | Description
 ### IntelligentScaling
 Config | Required Override | Default Value | Type | Description
 :--------------------------|:---|:----------|:----------|:--------------------------------------------------
-**enabled**|N|false|Double|Approximate list price of interactive DBU
+**enabled**|N|false|Boolean|Enable intelligent scaling?
 **minimumCores**|N|4|Int|Minimum number of cores to be used during Overwatch run
 **maximumCores**|N|512|Int|Maximum number of cores to be used during Overwatch run
 **coeff**|N|1.0|Double|Scaler, each module has a scale based on it's size relative to the other modules. This variable acts as a scaler to the scaler, if the modules are scaling too fast (or not fast enough), this can be tweaked to increase the variability of the scaling from the starting core count.
